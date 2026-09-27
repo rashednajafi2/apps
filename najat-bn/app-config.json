@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "app": "najat-bn",
+
+  "ads_enabled": false,
+  "banner_ads_enabled": false,
+
+  "ads_dashboard_enabled": false,
+  "ads_quran_enabled": false,
+  "ads_dua_enabled": false,
+  "ads_ziyarat_enabled": false,
+  "ads_sahifa_enabled": false,
+  "ads_nahjul_balagha_enabled": false,
+  "ads_dictionary_enabled": false,
+  "ads_other_pages_enabled": false,
+
+  "todays_tip_enabled": false,
+  "todays_tip_interval_hours": 24,
+
+  "config_refresh_minutes": 60,
+
+  "updated_at": "2026-09-28T01:20:00+06:00"
+}

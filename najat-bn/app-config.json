@@ -2,19 +2,19 @@
   "schema_version": 1,
   "app": "najat-bn",
 
-  "ads_enabled": false,
-  "banner_ads_enabled": false,
+  "ads_enabled": true,
+  "banner_ads_enabled": true,
 
-  "ads_dashboard_enabled": false,
-  "ads_quran_enabled": false,
-  "ads_dua_enabled": false,
-  "ads_ziyarat_enabled": false,
-  "ads_sahifa_enabled": false,
-  "ads_nahjul_balagha_enabled": false,
-  "ads_dictionary_enabled": false,
-  "ads_other_pages_enabled": false,
+  "ads_dashboard_enabled": true,
+  "ads_quran_enabled": true,
+  "ads_dua_enabled": true,
+  "ads_ziyarat_enabled": true,
+  "ads_sahifa_enabled": true,
+  "ads_nahjul_balagha_enabled": true,
+  "ads_dictionary_enabled": true,
+  "ads_other_pages_enabled": true,
 
-  "todays_tip_enabled": false,
+  "todays_tip_enabled": true,
   "todays_tip_interval_hours": 24,
 
   "updated_at": "2026-09-28T02:00:00+06:00"

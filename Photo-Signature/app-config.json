@@ -1,1 +1,5 @@
-
+{
+  "ads_enabled": true,
+  "banner_enabled": true,
+  "interstitial_enabled": true
+}

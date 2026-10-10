@@ -1,545 +1,75 @@
-This is a ready-to-use HTML document that presents your Photo & Signature privacy policy as a clean, modern webpage, with a hero header, quick summary, numbered sections, and dark mode support.
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Photo &amp; Signature</title>
-<meta name="description" content="Privacy Policy for Photo &amp; Signature (com.picsig.najafi). Learn how photos, signatures and data are handled.">
-<meta name="theme-color" content="#4f46e5">
-
-<!--
-  IMPORTANT: Replace YOUR_SUPPORT_EMAIL_HERE with your real email address.
-  (এখানে আপনার আসল email দেওয়া বাধ্যতামূলকভাবে ভালো হবে।)
--->
-
+<meta name="description" content="Privacy Policy for Photo & Signature (com.picsig.najafi).">
 <style>
-  :root{
-    --bg:#f4f6fb;
-    --card:#ffffff;
-    --text:#1b2233;
-    --muted:#5d6780;
-    --accent:#4f46e5;
-    --accent-2:#7c3aed;
-    --border:#e6e9f2;
-    --soft:#f7f8fd;
-    --shadow:0 18px 45px -22px rgba(28,32,64,.35);
-    --radius:18px;
-  }
-
-  *{box-sizing:border-box;}
-
-  html{scroll-behavior:smooth;}
-
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
-                "Noto Sans Bengali","Hind Siliguri","Helvetica Neue",Arial,sans-serif;
-    font-size:16px;
-    line-height:1.8;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-  }
-
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    overflow:hidden;
-    padding:70px 24px 130px;
-    text-align:center;
-    color:#fff;
-    background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 55%,#a855f7 100%);
-  }
-  .hero::before,
-  .hero::after{
-    content:"";
-    position:absolute;
-    border-radius:50%;
-    background:rgba(255,255,255,.12);
-    pointer-events:none;
-  }
-  .hero::before{width:320px;height:320px;top:-140px;left:-90px;}
-  .hero::after{width:420px;height:420px;bottom:-250px;right:-120px;background:rgba(255,255,255,.09);}
-
-  .badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:7px 16px;
-    border-radius:999px;
-    background:rgba(255,255,255,.18);
-    border:1px solid rgba(255,255,255,.3);
-    font-size:.78rem;
-    letter-spacing:.09em;
-    text-transform:uppercase;
-    font-weight:600;
-    backdrop-filter:blur(6px);
-  }
-  .badge .dot{
-    width:7px;height:7px;border-radius:50%;
-    background:#7dffb2;
-    box-shadow:0 0 0 4px rgba(125,255,178,.25);
-  }
-
-  .hero h1{
-    position:relative;
-    margin:22px 0 12px;
-    font-size:clamp(1.9rem,5vw,2.9rem);
-    line-height:1.2;
-    font-weight:800;
-    letter-spacing:-.02em;
-  }
-
-  .hero p{
-    position:relative;
-    max-width:640px;
-    margin:0 auto;
-    font-size:clamp(.95rem,2.2vw,1.06rem);
-    color:rgba(255,255,255,.92);
-  }
-
-  .hero-meta{
-    position:relative;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
-    margin-top:26px;
-  }
-  .chip{
-    font-size:.82rem;
-    padding:7px 15px;
-    border-radius:999px;
-    background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.24);
-    color:#fff;
-    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  }
-
-  /* ---------- LAYOUT ---------- */
-  .wrap{
-    max-width:860px;
-    margin:-78px auto 0;
-    padding:0 20px 70px;
-    position:relative;
-    z-index:2;
-  }
-
-  .card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-  }
-
-  /* ---------- SUMMARY ---------- */
-  .summary{
-    padding:28px 30px;
-    margin-bottom:22px;
-  }
-  .summary h2{
-    margin:0 0 16px;
-    font-size:1rem;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--muted);
-    font-weight:700;
-  }
-  .summary ul{
-    margin:0;
-    padding:0;
-    list-style:none;
-    display:grid;
-    gap:12px;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  }
-  .summary li{
-    display:flex;
-    gap:10px;
-    align-items:flex-start;
-    font-size:.94rem;
-    color:var(--text);
-    background:var(--soft);
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:12px 14px;
-    line-height:1.55;
-  }
-  .summary li span{flex:none;font-size:1.05rem;line-height:1.35;}
-
-  /* ---------- MAIN CARD ---------- */
-  .policy{
-    padding:14px 0;
-    overflow:hidden;
-  }
-
-  .section{
-    padding:30px 34px;
-    border-top:1px solid var(--border);
-  }
-  .section:first-child{border-top:none;}
-
-  .section-head{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin-bottom:12px;
-  }
-  .num{
-    flex:none;
-    display:grid;
-    place-items:center;
-    width:36px;height:36px;
-    border-radius:11px;
-    font-size:.82rem;
-    font-weight:800;
-    color:#fff;
-    background:linear-gradient(135deg,var(--accent),var(--accent-2));
-    box-shadow:0 8px 18px -8px rgba(79,70,229,.75);
-    font-variant-numeric:tabular-nums;
-  }
-  .section h2{
-    margin:0;
-    font-size:1.14rem;
-    font-weight:750;
-    letter-spacing:-.01em;
-    color:var(--text);
-  }
-
-  .section p{
-    margin:0 0 12px;
-    color:#333c52;
-  }
-  .section p:last-child{margin-bottom:0;}
-
-  .section ul{
-    margin:0 0 12px;
-    padding-left:0;
-    list-style:none;
-  }
-  .section ul li{
-    position:relative;
-    padding-left:22px;
-    margin-bottom:9px;
-    color:#333c52;
-  }
-  .section ul li::before{
-    content:"";
-    position:absolute;
-    left:4px;
-    top:.72em;
-    width:7px;height:7px;
-    border-radius:50%;
-    background:linear-gradient(135deg,var(--accent),var(--accent-2));
-    opacity:.85;
-  }
-  .section ul li:last-child{margin-bottom:0;}
-
-  strong{font-weight:700;color:var(--text);}
-
-  a{
-    color:var(--accent);
-    text-decoration:none;
-    border-bottom:1px solid rgba(79,70,229,.35);
-    transition:border-color .2s,color .2s;
-    word-break:break-word;
-  }
-  a:hover{color:var(--accent-2);border-bottom-color:var(--accent-2);}
-
-  /* ---------- HIGHLIGHT ---------- */
-  .note{
-    background:var(--soft);
-    border:1px solid var(--border);
-    border-left:4px solid var(--accent);
-    border-radius:12px;
-    padding:14px 18px;
-    margin:0 0 12px;
-    font-size:.95rem;
-    color:var(--muted);
-  }
-  .note:last-child{margin-bottom:0;}
-
-  /* ---------- CONTACT ---------- */
-  .contact-box{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    gap:16px;
-    justify-content:space-between;
-    background:linear-gradient(135deg,rgba(79,70,229,.09),rgba(168,85,247,.09));
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:18px 20px;
-  }
-  .contact-box .label{
-    font-size:.78rem;
-    text-transform:uppercase;
-    letter-spacing:.09em;
-    color:var(--muted);
-    font-weight:700;
-    margin-bottom:3px;
-  }
-  .contact-box .mail{
-    font-size:1rem;
-    font-weight:700;
-  }
-  .contact-box .mail a{border-bottom:none;}
-
-  /* ---------- FOOTER ---------- */
-  footer{
-    text-align:center;
-    padding:26px 20px 46px;
-    color:var(--muted);
-    font-size:.85rem;
-    line-height:1.7;
-  }
-  footer .sep{opacity:.5;margin:0 8px;}
-
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width:640px){
-    .hero{padding:54px 20px 118px;}
-    .wrap{margin-top:-70px;padding:0 14px 54px;}
-    .summary{padding:22px 20px;}
-    .section{padding:24px 20px;}
-    .section-head{gap:11px;}
-    .num{width:32px;height:32px;border-radius:10px;font-size:.76rem;}
-    .section h2{font-size:1.05rem;}
-    .contact-box{flex-direction:column;align-items:flex-start;}
-  }
-
-  /* ---------- DARK MODE ---------- */
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#0e1320;
-      --card:#151b2a;
-      --text:#e9edf7;
-      --muted:#98a3bb;
-      --border:#252d42;
-      --soft:#1b2233;
-      --shadow:0 18px 45px -22px rgba(0,0,0,.8);
-    }
-    .section p,
-    .section ul li{color:#c4cddf;}
-    body{background:var(--bg);}
-  }
-
-  /* ---------- PRINT ---------- */
-  @media print{
-    .hero{background:#4f46e5 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-    .wrap{margin-top:20px;}
-    .card{box-shadow:none;}
-    body{background:#fff;}
-  }
+body{font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:24px;line-height:1.65;color:#1f2937;background:#f8fafc}main{background:#fff;padding:28px;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.06)}h1,h2{color:#111827}h1{margin-top:0}.note{padding:16px;border-left:4px solid #4f46e5;background:#eef2ff;border-radius:8px}a{color:#4338ca;word-break:break-word}ul{padding-left:22px}.meta{color:#6b7280}footer{margin-top:24px;color:#6b7280;font-size:14px}
 </style>
 </head>
-
 <body>
+<main>
+<h1>Privacy Policy — Photo &amp; Signature</h1>
+<p class="meta"><strong>App:</strong> Photo &amp; Signature &nbsp;|&nbsp; <strong>Package:</strong> com.picsig.najafi &nbsp;|&nbsp; <strong>Developer:</strong> R. H. Najafi</p>
+<p class="meta"><strong>Effective date:</strong> 10 October 2026</p>
 
-  <!-- ================= HERO ================= -->
-  <header class="hero">
-    <span class="badge"><span class="dot"></span> Privacy Policy</span>
+<div class="note">
+<strong>Government affiliation disclaimer.</strong> Photo &amp; Signature is an independent photo and signature utility app. It is not a government app and is not affiliated with, endorsed by, authorized by, operated by, competing with, or acting on behalf of any government agency or government service. The app does not issue passports, visas, identity documents, government jobs, admissions, approvals, or any other government service. It only helps users edit and prepare image/signature files. Any government-related photo information shown by the app must be verified from the linked official source before submission.
+</div>
 
-    <h1>Photo &amp; Signature</h1>
+<h2>1. Photos and signatures</h2>
+<ul>
+<li>Photos selected by the user, photos captured through the device camera, signatures drawn in the app, and uploaded signature images are processed locally on the device for the app's core editing features.</li>
+<li>The developer does not intentionally upload users' photos, signatures, or finished image files to a developer-operated server.</li>
+<li>Finished files are saved to device storage only when the user chooses to save them. Temporary files may remain in app cache until Android, the app, or the user clears them.</li>
+</ul>
 
-    <p>
-      A utility app that helps you crop, resize, compress, validate, create and prepare
-      photos and signatures for job applications, admission forms, passport/ID-related
-      use and similar purposes.
-    </p>
+<h2>2. Sharing</h2>
+<p>The app can use Android's system sharing tools. A finished file is shared with another app or service only when the user explicitly chooses to share it. The receiving app or service handles that file under its own privacy practices.</p>
 
-    <div class="hero-meta">
-      <span class="chip">com.picsig.najafi</span>
-      <span class="chip">Effective: 7 October 2026</span>
-    </div>
-  </header>
+<h2>3. Advertising and consent</h2>
+<p>Photo &amp; Signature uses Google Mobile Ads (AdMob) and Google User Messaging Platform (UMP). These Google SDKs may process device identifiers, advertising information, IP address/approximate location, app interactions, diagnostics, and related technical data for advertising, consent, analytics, fraud prevention, and security according to Google's policies and the user's applicable consent choices.</p>
+<p>Google privacy information: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
 
-  <!-- ================= CONTENT ================= -->
-  <main class="wrap">
+<h2>4. Internet and remote configuration</h2>
+<p>Internet access is used for advertising, consent services, and a small remote ad-configuration file. The remote configuration does not intentionally contain the user's photos, signatures, or personal image content.</p>
 
-    <!-- Quick summary -->
-    <section class="card summary" aria-label="Quick summary">
-      <h2>Quick Summary</h2>
-      <ul>
-        <li><span>📱</span> Photos &amp; signatures are processed locally on your device.</li>
-        <li><span>🔒</span> No account or sign-in is required.</li>
-        <li><span>🚫</span> Your photos and signatures are never sold.</li>
-        <li><span>📤</span> Files leave your device only when you choose to share them.</li>
-      </ul>
-    </section>
+<h2>5. Permissions and device access</h2>
+<ul>
+<li>The app may use camera capture when the user chooses to take a photo.</li>
+<li>The app uses Android system file/photo selection where available.</li>
+<li>On older Android versions, legacy storage access may be used only where needed to save a finished file.</li>
+</ul>
 
-    <!-- Full policy -->
-    <article class="card policy">
+<h2>6. Data retention and deletion</h2>
+<p>The developer does not maintain a user account database or developer-hosted personal photo/signature library for this app. Users control files saved on their own device and may delete them using device file/gallery tools. App cache/data can be cleared through Android settings, and uninstalling the app removes app-local data. Data processed by Google SDKs is subject to Google's retention and deletion practices.</p>
 
-      <!-- 01 -->
-      <section class="section">
-        <div class="section-head">
-          <span class="num">01</span>
-          <h2>Photos and Signatures</h2>
-        </div>
-        <ul>
-          <li>Photos selected through Android's system Photo Picker, photos taken by the user,
-              signatures drawn inside the app and uploaded signature images are
-              <strong>processed locally on the user's device</strong>.</li>
-          <li>The developer does <strong>not</strong> intentionally upload users' photos,
-              signatures or edited output files to a developer-operated server.</li>
-          <li>Finished photos and signatures may be saved to the user's device. Recent-file
-              references and app settings may also be stored locally on the device.</li>
-        </ul>
-      </section>
+<h2>7. Accounts and personal information</h2>
+<p>No account or sign-in is required for the app's core features. The developer does not intentionally collect names, passwords, phone numbers, or email addresses through the photo/signature editing tools.</p>
 
-      <!-- 02 -->
-      <section class="section">
-        <div class="section-head">
-          <span class="num">02</span>
-          <h2>Sharing</h2>
-        </div>
-        <ul>
-          <li>The app allows users to share finished photos or signatures using Android's
-              system sharing feature. A file is transferred to another application
-              <strong>only when the user explicitly chooses to share it</strong>.</li>
-          <li>The receiving application or service may process that file according to its
-              own privacy policy.</li>
-        </ul>
-      </section>
+<h2>8. Security</h2>
+<p>The app is designed to keep core photo and signature editing on the device. Supported network communication uses HTTPS where applicable. No method of storage or transmission can be guaranteed to be completely secure.</p>
 
-      <!-- 03 -->
-      <section class="section">
-        <div class="section-head">
-          <span class="num">03</span>
-          <h2>Advertising</h2>
-        </div>
-        <ul>
-          <li>Photo &amp; Signature uses <strong>Google AdMob / Google Mobile Ads SDK</strong>
-              to display banner and interstitial advertisements.</li>
-          <li>Google Mobile Ads may automatically process information such as IP address
-              (which may be used to estimate approximate location), app interactions,
-              diagnostic/performance information, and device or advertising identifiers.
-              Google states these may be used for advertising, analytics and
-              fraud prevention/security purposes and are encrypted in transit.</li>
-          <li>The app also uses Google's <strong>User Messaging Platform (UMP)</strong> to
-              manage applicable advertising consent and privacy choices. Google recommends
-              checking consent status when the app launches and presenting privacy options
-              where required.</li>
-        </ul>
-      </section>
+<h2>9. Children</h2>
+<p>Photo &amp; Signature is a general-purpose utility and is not specifically directed to children under 13.</p>
 
-      <!-- 04 -->
-      <section class="section">
-        <div class="section-head">
-          <span class="num">04</span>
-          <h2>Internet and Remote Configuration</h2>
-        </div>
-        <ul>
-          <li>Internet access is used for advertisements, consent services and remote
-              configuration.</li>
-          <li>The app may download a small HTTPS configuration file from GitHub to remotely
-              enable or disable advertisements. This remote configuration does
-              <strong>not</strong> intentionally contain users' photos, signatures or other
-              personal content.</li>
-        </ul>
-      </section>
+<h2>10. Government-related information and official sources</h2>
+<p>The app may provide helper presets for image preparation. A helper preset is not a government service, authorization, approval, or guarantee of acceptance. Requirements may change at any time. For government-related presets, users should verify the current requirement at the applicable official source:</p>
+<ul>
+<li>U.S. Department of State — Passport Photos: <a href="https://travel.state.gov/en/passports/apply/help/photos.html">https://travel.state.gov/en/passports/apply/help/photos.html</a></li>
+<li>U.S. Department of State — Visa Digital Image Requirements: <a href="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos/digital-image-requirements.html">https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos/digital-image-requirements.html</a></li>
+<li>GOV.UK / HM Passport Office — Passport Photos: <a href="https://www.gov.uk/photos-for-passports">https://www.gov.uk/photos-for-passports</a></li>
+<li>Government of Canada — Temporary Resident Visa Photograph Specifications: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/temporary-resident-visa-application-photograph-specifications.html">https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/temporary-resident-visa-application-photograph-specifications.html</a></li>
+</ul>
 
-      <!-- 05 -->
-      <section class="section">
-        <div class="section-head">
-          <span class="num">05</span>
-          <h2>Data Retention</h2>
-        </div>
-        <ul>
-          <li>Photos and signatures processed by the app remain on the user's device unless
-              the user saves or shares them.</li>
-          <li>Users can delete locally saved files, clear the app's storage or uninstall
-              the app.</li>
-          <li>Data processed by Google AdMob or other third-party services is governed by
-              those providers' respective retention and privacy practices.</li>
-        </ul>
-      </section>
+<h2>11. Contact</h2>
+<p>For privacy questions or requests, use the developer contact email shown for <strong>Photo &amp; Signature</strong> in the Google Play developer contact section. The developer contact details in Google Play must be kept current.</p>
 
-      <!-- 06 -->
-      <section class="section">
-        <div class="section-head">
-          <span class="num">06</span>
-          <h2>Account and Personal Information</h2>
-        </div>
-        <ul>
-          <li>Photo &amp; Signature does <strong>not</strong> require users to create an
-              account or sign in for its core features.</li>
-          <li>The developer does not intentionally collect users' names, passwords, phone
-              numbers or email addresses through the photo/signature editing features.</li>
-        </ul>
-      </section>
-
-      <!-- 07 -->
-      <section class="section">
-        <div class="section-head">
-          <span class="num">07</span>
-          <h2>Children's Privacy</h2>
-        </div>
-        <p>
-          Photo &amp; Signature is a general-purpose utility app and is
-          <strong>not specifically directed to children under 13</strong>.
-        </p>
-      </section>
-
-      <!-- 08 -->
-      <section class="section">
-        <div class="section-head">
-          <span class="num">08</span>
-          <h2>Sale of Data</h2>
-        </div>
-        <p>
-          The developer does <strong>not</strong> sell users' photos, signatures or
-          personal content.
-        </p>
-      </section>
-
-      <!-- 09 -->
-      <section class="section">
-        <div class="section-head">
-          <span class="num">09</span>
-          <h2>Security</h2>
-        </div>
-        <p>
-          Reasonable measures are used to protect information and limit access. Network
-          communication used by the app's supported online services is made through secure
-          connections where supported.
-        </p>
-      </section>
-
-      <!-- 10 -->
-      <section class="section">
-        <div class="section-head">
-          <span class="num">10</span>
-          <h2>Contact</h2>
-        </div>
-
-        <div class="contact-box">
-          <div>
-            <div class="label">Support Email</div>
-            <div class="mail">
-              <a href="mailto:YOUR_SUPPORT_EMAIL_HERE">YOUR_SUPPORT_EMAIL_HERE</a>
-            </div>
-          </div>
-        </div>
-
-        <!--
-          یادداشت / নোট:
-          এখানে আপনার আসল email দেওয়া বাধ্যতামূলকভাবে ভালো হবে।
-        -->
-      </section>
-
-    </article>
-  </main>
-
-  <!-- ================= FOOTER ================= -->
-  <footer>
-    <div>© 2026 Photo &amp; Signature <span class="sep">•</span> com.picsig.najafi</div>
-    <div>This privacy policy may be updated from time to time.</div>
-  </footer>
-
+<h2>12. Changes to this policy</h2>
+<p>This policy may be updated when the app, SDKs, or legal/policy requirements change. The effective date above will be updated when material changes are made.</p>
+</main>
+<footer>© 2026 R. H. Najafi — Photo &amp; Signature</footer>
 </body>
 </html>
-```

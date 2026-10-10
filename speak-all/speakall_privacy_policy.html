@@ -1,0 +1,135 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SpeakAll Privacy Policy</title>
+<meta name="description" content="Privacy Policy for the SpeakAll Android app by R. H. Najafi.">
+<style>
+:root{color-scheme:light dark;--bg:#f7f8fc;--card:#fff;--text:#191d30;--muted:#636a80;--accent:#5258d6;--border:#e2e5ef}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}.wrap{max-width:920px;margin:auto;padding:32px 18px 60px}.hero{padding:28px;border-radius:24px;background:linear-gradient(135deg,#1b2659,#35419a,#188597);color:white;box-shadow:0 10px 32px rgba(27,38,89,.18)}h1{margin:0 0 8px;font-size:2.1rem}.hero p{margin:0;opacity:.94}.meta{font-size:.94rem;margin-top:14px;opacity:.9}.card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:22px;margin-top:16px}h2{margin:0 0 10px;font-size:1.25rem}h3{margin:18px 0 7px;font-size:1.05rem}p,li{color:var(--text)}ul{padding-left:22px}.note{padding:14px 16px;border-left:4px solid var(--accent);background:rgba(82,88,214,.08);border-radius:10px}a{color:var(--accent)}footer{margin-top:24px;color:var(--muted);font-size:.92rem}@media(prefers-color-scheme:dark){:root{--bg:#11131b;--card:#1b1e29;--text:#f1f3fa;--muted:#bbc0d0;--border:#303546;--accent:#9da1ff}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="hero">
+<h1>Privacy Policy for SpeakAll</h1>
+<p>SpeakAll is an Android ebook, document, text-to-speech, audiobook, OCR, translation, and AI voice application developed by R. H. Najafi.</p>
+<div class="meta">Effective date: October 10, 2026 · Package: com.speakall.najafi</div>
+</section>
+
+<section class="card">
+<h2>1. Scope and contact</h2>
+<p>This Privacy Policy explains how SpeakAll accesses, uses, stores, and shares information when you use the app. The developer identified in the Google Play listing is responsible for SpeakAll.</p>
+<p>For privacy questions or requests, use the <strong>Developer contact</strong> mechanism shown on SpeakAll's Google Play listing. SpeakAll does not require a user account.</p>
+</section>
+
+<section class="card">
+<h2>2. Information processed on your device</h2>
+<p>Most core reading features are designed to work locally on your Android device. Depending on the feature you use, SpeakAll may process:</p>
+<ul>
+<li>Text that you type, paste, dictate, or open in the app.</li>
+<li>Documents and images you select, including PDF, scanned PDF, DOC/DOCX, EPUB, TXT, JPG/JPEG, PNG, WEBP, and BMP files.</li>
+<li>Text extracted from documents and images through local parsing and OCR.</li>
+<li>Reading progress, bookmarks, recent-file history, text drafts, selected languages, voice preferences, playback speed and pitch, reward counts, Audiobook Credits, AI Translation usage, and AI Voice time balances.</li>
+</ul>
+<p>SpeakAll does not intentionally upload the contents of files to the developer's server merely to perform ordinary local document reading or local OCR.</p>
+</section>
+
+<section class="card">
+<h2>3. OCR, text-to-speech, and speech recognition</h2>
+<p>OCR is performed on-device using Google ML Kit and, where applicable, bundled/local OCR components. Android text-to-speech uses the speech engine installed on your device.</p>
+<p>If you choose speech input, SpeakAll launches Android's speech-recognition service. The recognition provider installed or selected on your device may process audio or speech data under that provider's own privacy terms. SpeakAll itself does not request the Android <code>RECORD_AUDIO</code> permission.</p>
+</section>
+
+<section class="card">
+<h2>4. Translation</h2>
+<h3>Offline translation</h3>
+<p>SpeakAll can use Google ML Kit on-device translation. Language models may be downloaded from Google when needed. After a model is available, translation can be performed on-device.</p>
+<h3>AI translation</h3>
+<p>If you choose an AI translation mode, the text you submit, together with source/target language information, is sent over HTTPS to SpeakAll's Cloudflare Worker. The Worker forwards the request through Cloudflare AI Gateway to Google's AI service to generate the translation.</p>
+</section>
+
+<section class="card">
+<h2>5. AI Voice</h2>
+<p>If you choose AI Voice, the text you ask SpeakAll to read, your selected AI voice, and speaking-style information are sent over HTTPS to SpeakAll's Cloudflare Worker and then through Cloudflare AI Gateway to Google's AI service so an audio response can be generated.</p>
+<p>The SpeakAll app does not contain the private Cloudflare or Google AI service credential. Those credentials are held server-side. SpeakAll's Worker is configured not to intentionally store the submitted text as an application database record; however, Cloudflare and Google may process or retain service, security, abuse-prevention, diagnostic, or operational data according to their own terms and policies.</p>
+</section>
+
+<section class="card">
+<h2>6. File import from a link</h2>
+<p>If you enter a direct file URL, SpeakAll connects to that URL over the internet to download the file you requested. The destination website or hosting provider may receive standard network information such as your IP address and request metadata. This user-initiated download is separate from SpeakAll's AI service.</p>
+</section>
+
+<section class="card">
+<h2>7. Advertising</h2>
+<p>SpeakAll uses Google Mobile Ads (AdMob) and may show three ad formats:</p>
+<ul>
+<li><strong>Banner ads</strong></li>
+<li><strong>Interstitial ads</strong> at natural breaks</li>
+<li><strong>Rewarded ads</strong> that users voluntarily watch to receive in-app usage credits or limits</li>
+</ul>
+<p>Google's advertising SDK may process information such as IP address, device/app identifiers, advertising identifiers where permitted, coarse location inferred from network information, ad interactions, diagnostics, and fraud-prevention information. The exact handling depends on device settings, region, consent state, and Google's advertising policies.</p>
+<p>SpeakAll uses Google's User Messaging Platform (UMP) to obtain and manage advertising privacy choices where required. Personalized or non-personalized ad treatment may depend on your choices and applicable law.</p>
+<p>SpeakAll also retrieves a small remote configuration from its Cloudflare Worker that contains only on/off flags for Banner, Interstitial, and Rewarded ad formats. This request does not send document text or AI content.</p>
+</section>
+
+<section class="card">
+<h2>8. Permissions</h2>
+<p>SpeakAll may use the following Android capabilities:</p>
+<ul>
+<li><strong>Internet and network state</strong> for ads, AI features, remote ad configuration, direct-link file downloads, and downloadable language/model resources.</li>
+<li><strong>Foreground media playback</strong> so reading can continue while the app is not in the foreground.</li>
+<li><strong>Notifications</strong> on supported Android versions to display media-playback controls and foreground-service status.</li>
+</ul>
+<p>SpeakAll does not request location, contacts, camera, SMS, phone, or direct microphone-recording permission in its current configuration.</p>
+</section>
+
+<section class="card">
+<h2>9. Local storage, retention, and deletion</h2>
+<p>SpeakAll stores app preferences, recent-file information, cached extracted text used by the library/reader, reading positions, bookmarks, credits, and similar app state locally on your device. Android backup is disabled for the application.</p>
+<p>Local information remains until you clear the relevant history/bookmarks where the app provides that option, clear SpeakAll's app storage from Android settings, or uninstall the app. Because SpeakAll does not provide user accounts, there is no server-side account profile to delete.</p>
+<p>For AI requests, SpeakAll's Worker does not intentionally maintain a user content database. Third-party service providers may apply their own operational retention practices.</p>
+</section>
+
+<section class="card">
+<h2>10. Data sharing and service providers</h2>
+<p>SpeakAll does not sell personal or sensitive user data. Information may be processed by third parties only as needed for features you use, including:</p>
+<ul>
+<li><strong>Google</strong> — AdMob, User Messaging Platform, Google Play Services/ML Kit, and Google AI services.</li>
+<li><strong>Cloudflare</strong> — SpeakAll's Worker and AI Gateway used for optional AI translation and AI Voice requests.</li>
+<li><strong>Your selected speech-recognition provider</strong> — only when you choose speech input.</li>
+<li><strong>A website or file host you select</strong> — when you choose to import a file from a direct link.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>11. Security</h2>
+<p>SpeakAll disables cleartext network traffic and uses HTTPS for its configured online services. Sensitive AI service credentials are not embedded in the Android app. Android application backup is disabled. No method of electronic transmission or storage can be guaranteed to be completely secure, but reasonable safeguards are used for the app's design and supported services.</p>
+</section>
+
+<section class="card">
+<h2>12. Children</h2>
+<p>SpeakAll is a general-purpose reading and productivity application and is not specifically designed to collect personal information from children. If the app is offered to children in a jurisdiction where additional consent or advertising requirements apply, the developer will apply the required Google Play and advertising settings.</p>
+</section>
+
+<section class="card">
+<h2>13. Your choices</h2>
+<ul>
+<li>You can choose whether to use optional AI translation or AI Voice features.</li>
+<li>You can use device voice instead of AI Voice.</li>
+<li>Where Google requires it, SpeakAll provides access to advertising privacy choices through the app.</li>
+<li>You can decline to watch Rewarded Ads; rewarded credits are optional.</li>
+<li>You can delete local app data through Android settings or uninstall the app.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>14. Changes to this policy</h2>
+<p>This policy may be updated when SpeakAll changes its features, service providers, permissions, data practices, or legal requirements. The effective date at the top of this page will be updated when material changes are made.</p>
+<div class="note"><strong>Google Play consistency:</strong> the disclosures in the Google Play Data safety form should be kept consistent with this Privacy Policy and the actual SDKs/features shipped in the app.</div>
+</section>
+
+<footer>© 2026 R. H. Najafi · SpeakAll</footer>
+</main>
+</body>
+</html>

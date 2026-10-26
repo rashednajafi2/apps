@@ -2,7 +2,7 @@
   "conditions": [],
   "parameters": {
     "ads_master_enabled": {
-      "defaultValue": {"value": "true"},
+      "defaultValue": {"value": "false"},
       "description": "Main advertising switch: false turns off all ad formats."
     },
     "ads_banner_enabled": {

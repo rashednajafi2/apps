@@ -1,0 +1,21 @@
+{
+  "conditions": [],
+  "parameters": {
+    "ads_master_enabled": {
+      "defaultValue": { "value": "false" },
+      "description": "Set true to allow formats enabled below. Set false to stop all ads."
+    },
+    "ads_banner_enabled": {
+      "defaultValue": { "value": "false" },
+      "description": "Banner placement on Home and Reader."
+    },
+    "ads_interstitial_enabled": {
+      "defaultValue": { "value": "false" },
+      "description": "Interstitial after successful imports with cooldown."
+    },
+    "ads_rewarded_enabled": {
+      "defaultValue": { "value": "false" },
+      "description": "Optional rewarded videos granting reading credits."
+    }
+  }
+}

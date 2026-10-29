@@ -2,19 +2,19 @@
   "conditions": [],
   "parameters": {
     "ads_master_enabled": {
-      "defaultValue": { "value": "true" },
+      "defaultValue": { "value": "false" },
       "description": "Set false to turn off all ads for installed clients."
     },
     "ads_banner_enabled": {
-      "defaultValue": { "value": "true" },
+      "defaultValue": { "value": "false" },
       "description": "Enable the banner placements on Home and Reader."
     },
     "ads_interstitial_enabled": {
-      "defaultValue": { "value": "true" },
+      "defaultValue": { "value": "false" },
       "description": "Enable interstitials on successful imports with a five-minute interval."
     },
     "ads_rewarded_enabled": {
-      "defaultValue": { "value": "true" },
+      "defaultValue": { "value": "false" },
       "description": "Enable optional rewarded videos that award credits only via AdMob callbacks."
     }
   }
